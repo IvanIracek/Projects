@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Courgette', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.container{
+    display: flex;
+    width: 80vw;
+}
+
+.panel{
+    position: relative;
+    height: 80vh;
+    flex: 0.5;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 45px;
+    color: white;
+    font-size: 175%;
+    margin: 10px;
+    cursor: pointer;
+    transition: flex 0.5s ease-in;
+
+}
+
+.panel.active{
+    flex: 3;
+}
+.panel.active h3{
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.5s;
+}
+
+.panel h3{
+    position: absolute;
+    bottom: 20px;
+    right: 25px;
+    opacity: 0;
+}
